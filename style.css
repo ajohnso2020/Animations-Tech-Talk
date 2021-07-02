@@ -1,0 +1,51 @@
+html {
+    background-color: seashell;
+}
+
+nav header {
+    font-size: 1.75em;
+    text-align: center;
+  }
+  
+  nav li {
+    list-style: none;
+    border: 2px solid red;
+    margin: 10px;
+    font-size: 1.3em;
+    padding: 7px;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 40%;
+  }
+  
+  #main-doc {
+  position: absolute;
+  margin-left: 40%;
+  padding: 20px;
+  margin-bottom: 110px;
+  }
+  
+  pre code {
+   background-color: #f3dae2;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px; 
+  }
+  
+  @media only screen and (max-width: 414px){
+     #nav-bar {
+         width: 100%;
+       position: relative;
+       font-size: 1.5em
+     }
+    
+    #main-doc {
+      margin-left: 0;
+      position: float;
+      margin-top: 30px;
+    }
+}

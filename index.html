@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Tech Talk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</html>
+<body>
+<nav id="navbar">  
+    <header>CSS Animations</header>
+    <ul>
+    <li><a class="nav-link" href="#introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#building_blocks">Building Blocks</a></li>
+    <li><a class="nav-link" href="#keyframe_components">KeyFrame Components</a></li>
+    <li><a class="nav-link" href="#animation_properties">Animation Properties</a></li>
+      <li><a class="nav-link" href="#additional_animation_properties">Additional Animation Properties</a></li>
+              </ul>
+    </nav>
+  
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header><h2>Introduction</h2></header>
+      <p>CSS Animations are like transitions in that they display the change of a CSS property from one state to another.</p>
+      <p>However, animations are most powerful because they involve many more in-between states and they offer more control over how those states are actually <b>animated.</b></p>
+    </section>
+    <section class="main-section" id="building_blocks">
+      <header><h2>Building Blocks</h2></header>
+      <p><i>Keyframes:</i> describe the stages and style of the animation.</p>
+      <p><i>Animation Properties:</i> these keyframes are assigned to a specific CSS property and define how they are animated.</p>
+      <pre>
+      <code>@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }</code>
+  </pre>
+    </section>
+    <section class="main-section" id="keyframe_components">
+      <header><h2>Keyframe Components</h2></header>
+      <ul>
+        <li>The animation name like "slideIn"</li>
+        <li>The stages of the animation in percentages like 0%, 50% and 100%</li>
+      <li>The specific CSS properties eligible for animation like font-size, height and left-margin</li>
+    </section>
+    <section class="main-section" id="animation_properties">
+      <header><h2>Animation Properties</h2></header>
+      <ul>
+        <li>Animation-name -> is the name defined keyframes and that describes the animation like bounceIn and fallDown. </li>
+        <li>Animation-duration -> is the duration of the animation defined in seconds or milliseconds.</li>
+      </ul>
+      <pre>
+      <code>div {
+    animation-duration: 2s;
+    animation-name: bounceIn;
+  }</code>
+  </pre>
+    </section>
+    <section class="main-section" id="additional_animation_properties">
+      <header><h2>Additional Animation Properties</h2></header>
+        <p>animation-timing-function -> describes the pace of the animation like "ease-in" and "linear".</p>
+      <pre>
+      <code>animation-timing-function: ease-in-out;</code>
+      </pre>
+        <p>animation-delay -> specifies when it starts in seconds or milliseconds.</pre>
+        <p>animation-iteration-count -> specifies how times the animation plays from once to infinite times.</p>
+      <pre>
+        <code>animation-iteration-count: 2;</code>
+      </pre>
+        <p>animation-direction -> specifies the direction it should play like in forward or reverse.  </pre>
+        <p>animation-fill-mode -> it describes how the animation is effected before and after it is played.</p>
+    <p>animation-play-state -> specifies when it plays or when it is paused.</p>
+      <pre>
+        <code>.div:hover {
+    animation-play-state: paused;
+  }</code>
+      </pre>
+    </section>
+  </main>
+</body>
+</html>
